@@ -82,7 +82,6 @@ a {
     border-radius: 12px;
     transition: all 1s;
     filter: saturate(120%);
-
 }
 
 .logo:nth-child(2) {
@@ -202,4 +201,64 @@ a {
         font-size: 1.4rem;
         word-spacing: 2px;
     }
+}
+
+.togit {
+    position: fixed;
+    right: 1em;
+    bottom: 3em;
+    background: #000;
+    z-index: 9999;
+    padding: 10px;
+    box-shadow: -3px -3px 5px #00105b, 5px 5px 5px #000;
+    border-radius: 10px;
+    transition: all 400ms ease;
+    filter: brightness(120%);
+    translate: 0 100px;
+    animation: show-git 3s 1s cubic-bezier(0.22, 0.61, 0.26, 0.74) forwards;
+}
+
+.togit a {
+    font-weight: bold;
+    font-size: small;
+    letter-spacing: 1.2px;
+    appearance: none;
+    border: none;
+    background: linear-gradient(90deg, #0084ff, #d803b1, #ff6f00);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+}
+
+@keyframes show-git {
+    50% {
+        translate: 0 -100px;
+        scale: 1.2;
+    }
+
+    100% {
+        translate: 0 0;
+    }
+}
+
+@media (max-width:550px) {
+    .togit {
+        padding: 5px;
+        right: 5px;
+    }
+
+    .togit a {
+        font-size: smaller;
+        letter-spacing: 0;
+    }
+}
+
+.togit:hover {
+    scale: 1.1;
+    transition: all 400ms ease;
+}
+
+.togit:active {
+    scale: 0.9;
 }
