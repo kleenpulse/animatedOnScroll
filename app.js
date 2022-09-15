@@ -1,4 +1,3 @@
-const sayHelloEl = document.getElementById('say-hello')
 const hiddenEl = document.querySelectorAll('.hidden')
 const shadowEl = document.querySelector('.logos')
 const observer = new IntersectionObserver((entries) => {
@@ -11,7 +10,10 @@ const observer = new IntersectionObserver((entries) => {
     })
 })
 hiddenEl.forEach((el) => observer.observe(el))
+
+
 // Say Hello
+const sayHelloEl = document.getElementById('say-hello')
 function sayHello() {
     let welcome;
     let date = new Date();
