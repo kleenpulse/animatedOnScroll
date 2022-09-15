@@ -82,6 +82,7 @@ a {
     border-radius: 12px;
     transition: all 1s;
     filter: saturate(120%);
+
 }
 
 .logo:nth-child(2) {
